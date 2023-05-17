@@ -50,7 +50,7 @@ ArrayList<HashMap<String, Object>> nulliflist = new ArrayList<>();
 while(nullifRs.next()) {
 HashMap<String, Object> nullif = new HashMap<String, Object>();
 nullif.put("이름", nullifRs.getString("이름")); 
-nullif.put("사분기", nullifRs.getInt("사분기")); 
+nullif.put("사분기", nullifRs.getString("사분기")); 
 nulliflist.add(nullif);
 }
 System.out.println(nulliflist);
@@ -136,7 +136,7 @@ table, td, th {
 			
 			<tr>
 				<td><%=(nullif.get("이름"))%></td>
-				<td><%=(Integer)(nullif.get("사분기"))%></td>
+				<td><%=(nullif.get("사분기"))%></td>
 			<tr>
 			<%
 				}
